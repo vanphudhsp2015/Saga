@@ -40,58 +40,35 @@ class TableComponent extends Component {
         fixed: "left"
       },
       {
-        title: "Images",
-        width: 100,
-        dataIndex: "author",
-        key: "images",
-        fixed: "left",
-        render: (text, row, index) => (
-          <Avatar size="large">{text.charAt(0)}</Avatar>
-        )
-      },
-      {
-        title: "Title",
-        dataIndex: "title",
+        title: "Name",
+        dataIndex: "name",
         key: "title",
         width: 110
       },
 
       {
-        title: "Categories",
-        dataIndex: "categories",
-        key: "categories",
+        title: "phone",
+        dataIndex: "phone",
+        key: "phone",
         width: 150
       },
       {
-        title: "Tags",
-        dataIndex: "tags",
-        key: "tags",
+        title: "avatar",
+        dataIndex: "avatar",
+        key: "avatar",
         width: 150
       },
       {
-        title: "Visibility",
-        dataIndex: "visibility",
-        key: "visibility",
+        title: "email",
+        dataIndex: "email",
+        key: "email",
         width: 150
       },
       {
-        title: "Commnets",
-        dataIndex: "commnets",
-        key: "commnets",
+        title: "address",
+        dataIndex: "address",
+        key: "address",
         width: 150
-      },
-      {
-        title: "Views",
-        dataIndex: "views",
-        key: "views",
-        width: 150
-      },
-      {
-        title: "Date_create",
-        dataIndex: "date_create",
-        key: "date_create",
-        width: 150,
-        render: text => <p>{moment(text).format("DD/MM/YYYY HH:mm")}</p>
       },
       {
         title: "Delete",

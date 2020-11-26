@@ -4,28 +4,30 @@ const ROOT_URL = env.REACT_APP_API_BE;
 export default class ApiPOST {
   // get post api
   static fetchPosts() {
-    const url = `${ROOT_URL}api/posts/`;
+    const url = `${ROOT_URL}product`;
     const request = axios.request({
       url,
-      method: "GET"
+      method: "GET",
     });
     return request;
   }
+
   // delete post api
   static deletePosts(action) {
-    const url = `${ROOT_URL}api/posts/${action}`;
+    const url = `${ROOT_URL}product/${action}`;
     const request = axios.request({
       url,
-      method: "DELETE"
+      method: "DELETE",
     });
     return request;
   }
+
   static addPosts(action) {
-    const url = `${ROOT_URL}api/posts/`;
+    const url = `${ROOT_URL}product`;
     const request = axios.request({
       url,
       method: "POST",
-      data: action
+      data: action,
     });
     return request;
   }

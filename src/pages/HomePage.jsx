@@ -14,9 +14,11 @@ class HomePage extends Component {
   componentDidMount() {
     this.props.loadData();
   }
+  
   onRemove = id => {
     this.props.deletePost(id);
   };
+
   onChangerView = () => {
     if (this.state.views === "TABLE") {
       this.setState({
@@ -28,12 +30,14 @@ class HomePage extends Component {
       });
     }
   };
+
   onAdd = data => {
-    this.props.addPost(data);
+    this.props.addPost(data)
     this.setState({
       views: "TABLE"
     });
   };
+
   render() {
     const { posts } = this.props;
     const View = () => {

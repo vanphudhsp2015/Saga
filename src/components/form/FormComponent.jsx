@@ -13,6 +13,7 @@ class FormComponent extends Component {
       visibility: ""
     };
   }
+  
   handleSubmit = e => {
     e.preventDefault();
     this.props.form.validateFieldsAndScroll((err, values) => {
@@ -21,9 +22,11 @@ class FormComponent extends Component {
       }
     });
   };
+
   onChangerView = () => {
     this.props.onChangerView();
   };
+
   render() {
     const { getFieldDecorator } = this.props.form;
     const formItemLayout = {
@@ -64,8 +67,8 @@ class FormComponent extends Component {
             </Button>
           </div>
           <Form {...formItemLayout} onSubmit={this.handleSubmit}>
-            <Form.Item label="Title" className={form.formItem} hasFeedback>
-              {getFieldDecorator("title", {
+            <Form.Item label="name" className={form.formItem} hasFeedback>
+              {getFieldDecorator("name", {
                 initialValue: this.state.title,
                 rules: [
                   {
@@ -76,8 +79,8 @@ class FormComponent extends Component {
                 ]
               })(<Input className={form.formInput} />)}
             </Form.Item>
-            <Form.Item label="Author" className={form.formItem} hasFeedback>
-              {getFieldDecorator("author", {
+            <Form.Item label="phone" className={form.formItem} hasFeedback>
+              {getFieldDecorator("phone", {
                 initialValue: this.state.author,
                 rules: [
                   {
@@ -88,8 +91,8 @@ class FormComponent extends Component {
                 ]
               })(<Input className={form.formInput} />)}
             </Form.Item>
-            <Form.Item label="Categories" className={form.formItem} hasFeedback>
-              {getFieldDecorator("categories", {
+            <Form.Item label="avatar" className={form.formItem} hasFeedback>
+              {getFieldDecorator("avatar", {
                 initialValue: this.state.categories,
                 rules: [
                   {
@@ -100,8 +103,8 @@ class FormComponent extends Component {
                 ]
               })(<Input className={form.formInput} />)}
             </Form.Item>
-            <Form.Item label="Tags" className={form.formItem} hasFeedback>
-              {getFieldDecorator("tags", {
+            <Form.Item label="email" className={form.formItem} hasFeedback>
+              {getFieldDecorator("email", {
                 initialValue: this.state.tags,
                 rules: [
                   {
@@ -112,8 +115,8 @@ class FormComponent extends Component {
                 ]
               })(<Input className={form.formInput} />)}
             </Form.Item>
-            <Form.Item label="Visibility" className={form.formItem} hasFeedback>
-              {getFieldDecorator("visibility", {
+            <Form.Item label="address" className={form.formItem} hasFeedback>
+              {getFieldDecorator("address", {
                 initialValue: this.state.visibility,
                 rules: [
                   {
@@ -126,7 +129,7 @@ class FormComponent extends Component {
             </Form.Item>
             <Form.Item {...tailFormItemLayout} className={form.formItem}>
               <Button type="primary" htmlType="submit">
-                Register
+                Save
               </Button>
             </Form.Item>
           </Form>

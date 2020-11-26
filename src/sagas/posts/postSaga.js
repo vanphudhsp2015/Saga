@@ -9,7 +9,7 @@ export function* loadPosts() {
     const posts = yield call(ApiPosts.fetchPosts);
     yield put({
       type: POST.LOAD_GET,
-      payload: posts.data
+      payload: posts.data,
     });
   } catch (error) {
     message.error(MESSAGES.Error.replace("{value}", "Network"));
@@ -36,7 +36,7 @@ export function* createPosts(action) {
     const posts = yield call(ApiPosts.addPosts, action.payload);
     yield put({
       type: POST.ADD_POST_SUCCESS,
-      payload: posts.data
+      payload: posts.data,
     });
     message.info(MESSAGES.SUCCESS.replace("{value}", "Add"));
   } catch (error) {
@@ -46,4 +46,3 @@ export function* createPosts(action) {
 export function* reviewAddPosts() {
   yield takeLatest(POST.ADD_POST, createPosts);
 }
-// diffirent takeEvery and takeLatest
